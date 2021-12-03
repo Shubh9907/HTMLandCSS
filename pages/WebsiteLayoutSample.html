@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Website Layout Model</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            display: flex;
+            min-height: 100vh;
+            flex-direction: row;
+            margin: 0;
+        }
+
+        .leftSideItem {
+            background-color: blue;
+            flex: 1;
+        }
+
+        .bigDiv {
+            display: flex;
+            flex-direction: column;
+            flex: 5;
+        }
+
+        .innerDiv {
+            display: flex;
+            flex-direction: row;
+        }
+
+        .smallDiv {
+            display: flex;
+            flex-direction: column;
+            flex: 4;
+        }
+
+
+        header,
+        footer {
+            background: yellowgreen;
+            height: 20vh;
+        }
+
+        .innerDiv rightSide {
+            background-color: rgb(185, 14, 14);
+            flex: 1;
+        }
+        .smallDiv article {
+
+            background-color: burlywood;
+            height: 60vh;
+        }
+
+        header,
+        footer,
+        article,
+        leftSide,
+        rightSide {
+            padding: 1em;
+        }
+    </style>
+</head>
+
+<body>
+    <leftSide class="leftSideItem">Left Side</leftSide>
+    <div class="bigDiv">
+        <header class="header">Header</header>
+        <div class="innerDiv">
+            <div class="smallDiv">
+                <article>Article</article>
+                <footer>Footer</footer>
+            </div>
+            <rightSide class="rightSideItem">Right Side</rightSide>
+        </div>
+    </div>
+</body>
+
+</html>
